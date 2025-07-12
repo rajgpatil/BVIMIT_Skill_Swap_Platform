@@ -1,0 +1,22 @@
+-- Insert sample skills
+INSERT INTO public.skills (name, description, category) VALUES
+('JavaScript', 'Programming language for web development', 'Programming'),
+('Python', 'Versatile programming language for data science and web development', 'Programming'),
+('React', 'JavaScript library for building user interfaces', 'Programming'),
+('Node.js', 'JavaScript runtime for server-side development', 'Programming'),
+('Photoshop', 'Image editing and graphic design software', 'Design'),
+('Figma', 'Collaborative interface design tool', 'Design'),
+('UI/UX Design', 'User interface and user experience design', 'Design'),
+('Spanish', 'Spanish language conversation and grammar', 'Language'),
+('French', 'French language conversation and grammar', 'Language'),
+('English Tutoring', 'English language teaching and tutoring', 'Language'),
+('Digital Marketing', 'Online marketing strategies and techniques', 'Marketing'),
+('SEO', 'Search engine optimization techniques', 'Marketing'),
+('Content Writing', 'Creating engaging written content', 'Marketing'),
+('Excel', 'Spreadsheet software and data analysis', 'Business'),
+('Data Analysis', 'Analyzing and interpreting data', 'Business'),
+('Project Management', 'Planning and managing projects effectively', 'Business'),
+('Photography', 'Digital photography techniques and editing', 'Creative'),
+('Video Editing', 'Video production and post-processing', 'Creative'),
+('Music Production', 'Creating and producing music', 'Creative'),
+('Guitar', 'Playing guitar and music theory', 'Creative');
