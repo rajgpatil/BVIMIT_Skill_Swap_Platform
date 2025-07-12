@@ -1,9 +1,21 @@
 const User = require('../models/User');
 const generateToken = require('../utils/generateToken');
+const validator = require('validator');
 
 exports.register = async (req, res) => {
   try {
     const { name, email, password } = req.body;
+
+    if (validator.isEmpty(name.trim()) || name.length < 2) {
+            return res.json({ success: false, message: "Please enter valid name" })
+    }
+    if (!validator.isEmail(email)) {
+            return res.json({ success: false, message: "Please enter a valid email" })
+    }
+    if(!validator.isStrongPassword(password)){
+            return res.json({success:false,message:"Password must be at least 8 characters long and include uppercase, lowercase, number, and special character."})
+    }
+
     const userExists = await User.findOne({ email });
     if (userExists) return res.status(400).json({ message: 'User already exists' });
 
