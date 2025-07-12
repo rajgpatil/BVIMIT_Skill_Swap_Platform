@@ -6,11 +6,13 @@ const userRoutes = require('./routes/userRoutes');
 const swapRoutes = require('./routes/swapRoutes');
 const feedbackRoutes = require('./routes/feedbackRoutes');
 const adminRoutes = require('./routes/adminRoutes');
+const cors = require('cors');
 
 const app = express();
 dotenv.config();
 connectDB();
 
+app.use(cors());
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
